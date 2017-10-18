@@ -1,0 +1,15 @@
+h2 {
+    color: red;
+    font-size: 50px;
+}
+body {
+    background-color: darkslategrey;
+}
+
+p {
+    color: white;
+    font-size: 40px;
+}
+select {
+    margin-top: 4px;
+}
