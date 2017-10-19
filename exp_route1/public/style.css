@@ -4,12 +4,11 @@ h2 {
 }
 body {
     background-color: darkslategrey;
+    margin: 0px;
+    padding: 0px;
 }
 
 p {
     color: white;
     font-size: 40px;
-}
-select {
-    margin-top: 4px;
 }

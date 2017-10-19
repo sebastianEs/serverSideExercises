@@ -14,3 +14,5 @@ console.log(readMe);
 
 server.listen(port);
 console.log('server is listening to ' + port)
+//****************************** exercise 1.5 *********************
+// creates a server on port 3000 and uses the fs module and readFileSync to write a lorem ipsum text in the browser.

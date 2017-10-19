@@ -19,6 +19,6 @@ io.on('connection', (socket) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up and running at 3000!');
+app.listen(4000, () => {
+    console.log('Server is up and running at 4000!');
 })

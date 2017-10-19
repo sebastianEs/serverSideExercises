@@ -12,3 +12,5 @@ https.get('https://yhjust16.herokuapp.com/lorem', (res) => {
 }).on('error', (e) => {
     console.log('Error!: ' + e);
 })
+//************************** exercise 1.7 **************************
+// makes a https get request at the url and writes the data in the console.

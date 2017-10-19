@@ -1,25 +1,21 @@
-const http =require('http');
-const fs = require('fs');
-var arr = [];
-var port = 4000;
+var http = require('http'),
+    fs = require('fs');
 
-const server = http.createServer((req,res) => {
-  var myReadStream = fs.createReadStream('text.txt');
-  var data = "";
-  myReadStream.on('data', (chunk) => {
-      data += chunk;
-  });
-  myReadStream.on('end', () => {
-     arr.push(data);
-      console.log(data);
-      console.log(arr.length);
-      arr.forEach(function(elem) {
-          console.log('elem :' + elem);
-          elem = arr.filter(arr => arr.length => 2);
-      })
-      res.end(arr.toString());
-  });
-});
-server.listen(port);
-console.log('Server is Alive! ' + port);
+let array=[]
 
+fs.readFile('./text.txt', function(err,data){
+    if(err)
+        console.log(err)
+    console.log(data)
+    array.push(data.toString());
+    array = data.split('t')
+})
+
+http.createServer((req,res) => {
+    
+    array.forEach(function(word){
+        res.write(word);
+    })
+    res.end();
+}).listen(3000)
+console.log("server is alive at port 3000")

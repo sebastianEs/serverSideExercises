@@ -7,7 +7,7 @@ router.get('/', (req,res) => {
 
 router.get('/user/:userID', (req,res) => {
     var userID = req.params.userID;
-    console.log(userID);
+    console.log('UserID: ' + userID);
     res.render('user', {
         username: 'sebbe',
         userID: userID
